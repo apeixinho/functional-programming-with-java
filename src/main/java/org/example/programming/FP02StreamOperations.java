@@ -1,4 +1,4 @@
-package programming;
+package org.example.programming;
 
 import java.util.Comparator;
 import java.util.List;
@@ -18,11 +18,11 @@ public class FP02StreamOperations {
 
 		List<Integer> squaredNumbers = numbers.stream()
 				.map(number -> number * number) //Stream<R>
-				.collect(Collectors.toList()); //R
+				.toList(); //R
 
 		List<Integer> evenNumbersOnly = numbers.stream()
 				.filter(x -> x % 2 == 0) //Stream<T>
-				.collect(Collectors.toList());
+				.toList();
 		
 		int sum = numbers.stream()
 				.reduce(0, (x,y) -> x*x + y*y); //T
@@ -33,8 +33,8 @@ public class FP02StreamOperations {
 		List<String> courses = List.of("Spring", "Spring Boot", "API" , "Microservices","AWS", "PCF","Azure", "Docker", "Kubernetes");
 
 		List<String> coursesSortedByLengthOfCourseTitle = courses.stream()
-				.sorted(Comparator.comparing(str -> str.length()))
-				.collect(Collectors.toList());
+				.sorted(Comparator.comparing(String::length))
+				.toList();
 		
 	}
 }

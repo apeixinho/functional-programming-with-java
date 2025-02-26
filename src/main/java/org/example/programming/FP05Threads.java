@@ -1,4 +1,4 @@
-package programming;
+package org.example.programming;
 
 public class FP05Threads {
 

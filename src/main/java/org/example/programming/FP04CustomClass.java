@@ -1,4 +1,4 @@
-package programming;
+package org.example.programming;
 
 import java.util.Comparator;
 import java.util.List;

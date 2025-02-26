@@ -1,5 +1,5 @@
-package programming;
 
+package org.example.programming;
 import java.util.List;
 
 public class FP01Structured {
